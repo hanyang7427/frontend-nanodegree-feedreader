@@ -34,7 +34,7 @@ $(function() {
         it('check urls', function () {
             for(feed of allFeeds){
                 expect('url' in feed).toBe(true);
-                expect(feed['url']).not.toBeNull();
+                expect(Boolean(feed['url'])).toBe(true);
             }
         });
 
@@ -45,7 +45,7 @@ $(function() {
         it('check names', function () {
             for(feed of allFeeds){
                 expect('name' in feed).toBe(true);
-                expect(feed['name']).not.toBeNull();
+                expect(Boolean(feed['name'])).toBe(true);
             }
         });
     });
